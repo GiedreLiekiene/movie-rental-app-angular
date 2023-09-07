@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9d9d9;
+}
+
+.header {
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Inter";
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
