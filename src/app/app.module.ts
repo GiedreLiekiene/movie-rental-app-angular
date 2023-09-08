@@ -10,7 +10,13 @@ import { HeaderComponent } from './header/header.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, FooterComponent, HeaderComponent, MovieCardComponent],
+  declarations: [
+    AppComponent,
+    FooterComponent,
+    HeaderComponent,
+    MovieCardComponent,
+    NavbarComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
