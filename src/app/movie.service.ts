@@ -14,6 +14,7 @@ export class MovieService {
     { name: 'Movie 7', genre: 'Romance', price: '4.25$', stockCount: 0 },
     { name: 'Movie 8', genre: 'Horror', price: '4.99$', stockCount: 4 },
   ];
+
   constructor() {}
 
   getMovies() {
