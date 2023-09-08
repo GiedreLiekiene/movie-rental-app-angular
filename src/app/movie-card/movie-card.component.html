@@ -1,55 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Inter"
-      rel="stylesheet"
-    />
-    <link href="./movie-card.component.css" rel="stylesheet" type="text/css" />
-    <title>Home</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="content">
-        <table id="movieTable" class="table2">
-          <th class="main-heading" colspan="5">Available Movies</th>
-          <tr class="table-headings">
-            <th>Name</th>
-            <th>Genre</th>
-            <th>Price for 12h</th>
-            <th>Is in stock</th>
-            <th></th>
-          </tr>
-          <tbody>
-            <tr *ngFor="let movie of movies">
-              <td>{{ movie.name }}</td>
-              <td>{{ movie.genre }}</td>
-              <td>{{ movie.price }}</td>
-              <td>
-                <img
-                  [src]="
-                    movie.stockCount > 0
-                      ? './icons/green.png'
-                      : './icons/red.png'
-                  "
-                  alt="Stock Icon"
-                  [height]="10"
-                  [width]="10"
-                />
-              </td>
-              <td>
-                <button (click)="rentMovie(movie)" *ngIf="movie.stockCount > 0">
-                  Rent
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <script src="./home.js"></script>
-  </body>
-</html>
+<div class="container">
+  <div class="content">
+    <table id="movieTable" class="table2">
+      <th class="main-heading" colspan="5">Available Movies</th>
+      <tr class="table-headings">
+        <th>Name</th>
+        <th>Genre</th>
+        <th>Price for 12h</th>
+        <th>Is in stock</th>
+        <th></th>
+      </tr>
+      <tbody>
+        <tr *ngFor="let movie of movies">
+          <td>{{ movie.name }}</td>
+          <td>{{ movie.genre }}</td>
+          <td>{{ movie.price }}</td>
+          <td>
+            <img
+              [src]="
+                movie.stockCount > 0 ? './icons/green.png' : './icons/red.png'
+              "
+              alt="Stock Icon"
+              [height]="10"
+              [width]="10"
+            />
+          </td>
+          <td>
+            <button (click)="rentMovie(movie)" *ngIf="movie.stockCount > 0">
+              Rent
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
