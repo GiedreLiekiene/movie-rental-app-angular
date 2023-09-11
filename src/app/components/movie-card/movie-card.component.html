@@ -10,7 +10,7 @@
         <th></th>
       </tr>
       <tbody>
-        <tr *ngFor="let movie of movies">
+        <tr class="table-content" *ngFor="let movie of movies">
           <td>{{ movie.name }}</td>
           <td>{{ movie.genre }}</td>
           <td>{{ movie.price }}</td>
@@ -26,8 +26,12 @@
               [width]="10"
             />
           </td>
-          <td>
-            <button (click)="rentMovie(movie)" *ngIf="movie.stockCount > 0">
+          <td class="btn-column">
+            <button
+              class="button"
+              (click)="rentMovie(movie)"
+              *ngIf="movie.stockCount > 0"
+            >
               Rent
             </button>
           </td>
