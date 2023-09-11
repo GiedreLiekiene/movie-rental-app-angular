@@ -17,7 +17,9 @@
           <td>
             <img
               [src]="
-                movie.stockCount > 0 ? './icons/green.png' : './icons/red.png'
+                movie.stockCount > 0
+                  ? './assets/icons/green.png'
+                  : './assets/icons/red.png'
               "
               alt="Stock Icon"
               [height]="10"
