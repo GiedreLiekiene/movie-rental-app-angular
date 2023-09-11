@@ -27,13 +27,7 @@
             />
           </td>
           <td class="btn-column">
-            <button
-              class="button"
-              (click)="rentMovie(movie)"
-              *ngIf="movie.stockCount > 0"
-            >
-              Rent
-            </button>
+            <button class="button" (click)="rentMovie(movie)">Rent</button>
           </td>
         </tr>
       </tbody>
