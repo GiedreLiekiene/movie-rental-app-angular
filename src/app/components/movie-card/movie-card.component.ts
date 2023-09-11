@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from '../movie.service';
+import { MovieService } from '../../movie.service';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css'],
+  selector: 'app-movie-card',
+  templateUrl: './movie-card.component.html',
+  styleUrls: ['./movie-card.component.css'],
 })
-export class FooterComponent implements OnInit {
+export class MovieCardComponent implements OnInit {
   movies: any[] = [];
 
   constructor(private movieService: MovieService) {}
