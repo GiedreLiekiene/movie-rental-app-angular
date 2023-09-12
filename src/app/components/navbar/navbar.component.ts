@@ -24,4 +24,9 @@ export class NavbarComponent implements OnInit {
   rentMovie(movieName: string) {
     this.movieService.rentMovie(movieName);
   }
+
+  logout(): void {
+    console.log('logout');
+    sessionStorage.clear();
+  }
 }
