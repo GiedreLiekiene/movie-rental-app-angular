@@ -13,7 +13,17 @@
         <tr class="table-content" *ngFor="let movie of yourMovies">
           <td>{{ movie.name }}</td>
           <td>{{ movie.genre }}</td>
+          <td>
+            <button class="button-time" (click)="decrementRentalTime(movie)">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <span class="time-window">{{ movie.time }}</span>
+            <button class="button-time" (click)="incrementRentalTime(movie)">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </td>
           <td>{{ movie.price }}</td>
+
           <td class="btn-column">
             <button class="button" (click)="removeMovie(movie)">Remove</button>
           </td>
