@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="content">
+    <table id="movieTable" class="table2">
+      <th class="main-heading" colspan="5">Available Movies</th>
+      <tr class="table-headings">
+        <th>Name</th>
+        <th>Genre</th>
+        <th>Time</th>
+        <th>Price</th>
+        <th></th>
+      </tr>
+      <tbody>
+        <tr class="table-content" *ngFor="let movie of movies">
+          <td>{{ movie.name }}</td>
+          <td>{{ movie.genre }}</td>
+          <td>{{ movie.price }}</td>
+          <td class="btn-column">
+            <button class="button" (click)="removeMovie(movie)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

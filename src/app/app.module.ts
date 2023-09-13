@@ -11,6 +11,7 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
 import { HomeComponent } from './components/home/home.component';
 import { YourMoviesComponent } from './components/your-movies/your-movies.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { RentedMoviesComponent } from './components/rented-movies/rented-movies.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     HomeComponent,
     YourMoviesComponent,
     ProfileComponent,
+    RentedMoviesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
