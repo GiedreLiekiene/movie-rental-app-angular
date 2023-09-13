@@ -17,6 +17,7 @@ export class YourMoviesComponent implements OnInit {
   }
 
   loadYourMovies() {
+    //use the yourMoviesService to get the yourMovies array
     this.yourMovies = this.yourMoviesService.getYourMovies();
   }
 
@@ -32,8 +33,6 @@ export class YourMoviesComponent implements OnInit {
   }
 
   updateHomePageMovieList(movieName: string) {
-    // Assuming you have a service or method to update the home page movie list, replace with actual implementation
-    // This method will typically update the stock count and UI in the home page
     this.yourMoviesService.updateHomePageMovieList(movieName);
   }
 }
