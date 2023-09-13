@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { YourMoviesService } from 'src/app/services/your-movies.service';
 
 @Component({
   selector: 'app-rented-movies',
@@ -8,27 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class RentedMoviesComponent implements OnInit {
   yourMovies: any[] = [];
 
-  constructor() {}
+  constructor(private YourMoviesService: YourMoviesService) {}
 
   ngOnInit(): void {
     this.loadYourMovies();
   }
 
   loadYourMovies() {
-    this.yourMovies = [
-      {
-        name: 'Batman',
-        genre: 'Action',
-        time: '12h',
-        price: '4.55$',
-      },
-      {
-        name: 'Batman',
-        genre: 'Action',
-        time: '12h',
-        price: '4.55$',
-      },
-    ];
+    this.yourMovies = this.YourMoviesService.getYourMovies();
   }
 
   removeMovie(movie: any) {
