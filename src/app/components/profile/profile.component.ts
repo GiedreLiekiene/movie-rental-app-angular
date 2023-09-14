@@ -9,10 +9,27 @@ export class ProfileComponent {
   name = 'John';
   surname = 'Newman';
   email = 'john.newman@mail.com';
+  newPassword: string = ''; // Add a property to store the new password
+  passwordResetSuccess: string = '';
+  passwordResetError: string = '';
+
+  private showAlert(message: string, isError: boolean = false) {
+    if (isError) {
+      alert(`Error: ${message}`);
+    } else {
+      alert(message);
+    }
+  }
 
   resetPassword() {
-    // Implement password reset functionality here if needed
-    console.log('Password reset functionality not implemented yet.');
+    // Simulation of password reset with a success message
+    this.passwordResetSuccess = 'Password reset successful!';
+
+    // Reset the success message after 3 seconds
+    setTimeout(() => {
+      this.passwordResetSuccess = '';
+    }, 3000);
+    this.showAlert('Password reset successful!');
   }
 
   resetEmail() {
