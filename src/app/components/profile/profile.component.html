@@ -1,1 +1,19 @@
-<p>profile works!</p>
+<div class="container">
+  <div class="content">
+    <div class="profile-card">
+      <div class="main-heading">Profile</div>
+      <div class="profile-pic">
+        <img src="./assets/icons/profile.png" style="height: 30%; width: 30%" />
+      </div>
+      <div class="profile-info">
+        <p>Name: {{ name }}</p>
+        <p>Surname: {{ surname }}</p>
+        <p>Email: {{ email }}</p>
+      </div>
+      <div class="buttons">
+        <button class="button" (click)="resetPassword()">Reset password</button>
+        <button class="button" (click)="resetEmail()">Reset email</button>
+      </div>
+    </div>
+  </div>
+</div>
