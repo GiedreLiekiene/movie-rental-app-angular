@@ -14,6 +14,7 @@ import { RentedMoviesComponent } from './components/rented-movies/rented-movies.
 import { RegisterComponent } from './components/register/register.component';
 import { LoginRegisterComponent } from './components/login-register/login-register.component';
 import { LoginComponent } from './components/login/login.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { LoginComponent } from './components/login/login.component';
     LoginRegisterComponent,
     LoginComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, RouterModule],
   providers: [],
   bootstrap: [AppComponent],
 })
