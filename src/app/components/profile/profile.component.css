@@ -102,28 +102,3 @@
 .btn-column {
   width: 0%;
 }
-
-.footer {
-  position: relative;
-  color: #ffffff;
-  background-color: #000000;
-  padding: 10px;
-  text-align: center;
-}
-
-.footer-sec-1 {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.footer-sec-2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
