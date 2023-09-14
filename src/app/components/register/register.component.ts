@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -13,9 +14,35 @@ export class RegisterComponent {
   password: string = '';
   passwordAgain: string = '';
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   register(): void {
-    alert('Registration successful.');
+    if (this.validateRegistrationForm()) {
+      // redirect to the home page
+      this.router.navigate(['/home']);
+    }
+  }
+
+  validateRegistrationForm(): boolean {
+    if (
+      this.name.trim() === '' ||
+      this.surname.trim() === '' ||
+      this.email.trim() === '' ||
+      this.emailAgain.trim() === '' ||
+      this.password.trim() === '' ||
+      this.passwordAgain.trim() === ''
+    ) {
+      return false;
+    }
+
+    if (this.email !== this.emailAgain) {
+      return false;
+    }
+
+    if (this.password !== this.passwordAgain) {
+      return false;
+    }
+
+    return true;
   }
 }
