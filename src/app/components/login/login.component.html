@@ -3,7 +3,13 @@
     <form>
       <div class="section-1">
         <label for="email">Email</label>
-        <input type="text" name="email" id="emailLogin" placeholder="email" />
+        <input
+          type="text"
+          name="email"
+          id="emailLogin"
+          placeholder="email"
+          [(ngModel)]="email"
+        />
         <br />
         <label for="password">Password</label>
         <input
@@ -11,6 +17,7 @@
           name="password"
           id="passwordLogin"
           placeholder="password"
+          [(ngModel)]="password"
         />
         <br />
         <div class="button-sec">
