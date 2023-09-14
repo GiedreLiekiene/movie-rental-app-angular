@@ -12,6 +12,8 @@ import { YourMoviesComponent } from './components/your-movies/your-movies.compon
 import { ProfileComponent } from './components/profile/profile.component';
 import { RentedMoviesComponent } from './components/rented-movies/rented-movies.component';
 import { RegisterComponent } from './components/register/register.component';
+import { LoginRegisterComponent } from './components/login-register/login-register.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { RegisterComponent } from './components/register/register.component';
     ProfileComponent,
     RentedMoviesComponent,
     RegisterComponent,
+    LoginRegisterComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

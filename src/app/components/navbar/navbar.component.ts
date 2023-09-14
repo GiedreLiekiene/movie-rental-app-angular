@@ -30,7 +30,7 @@ export class NavbarComponent implements OnInit {
     console.log('logout');
     sessionStorage.clear(); // Clear session data
     // Redirect to the login page
-    this.router.navigate(['/login']);
+    this.router.navigate(['/login-register']);
     // Display a logout message
     alert('You have been logged out successfully.');
   }
